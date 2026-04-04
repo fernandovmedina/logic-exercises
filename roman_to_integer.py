@@ -26,15 +26,14 @@ class Solution:
 
   # Function to verify that the same letter does not repit more than 3 times
   def verifyNoMoreThanThree(self, s: str) -> bool:
-    # By default it is always one, because the letter is always repeated at least once
     count = 1
     for i in range(len(s) - 1):
-      if s[i] == s[i + 1]:
-        count += 1
-    # Here we check that the same letter does not repite more than 3 time
-    if count > 3:
-      count = 0
-      return True
+        if s[i] == s[i + 1]:
+            count += 1
+            if count > 3:
+                return True
+        else:
+            count = 1  # ← reiniciar al cambiar de letra
     return False
 
 x = Solution()
@@ -42,4 +41,5 @@ x = Solution()
 print(x.romanToInt("III"))
 print(x.romanToInt("LVIII"))
 print(x.romanToInt("MCMXCIV"))
+print(x.romanToInt("MDCCCLXXXIV"))
     
