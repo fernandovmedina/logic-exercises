@@ -12,12 +12,16 @@ class Solution:
     while i < len(s) - 1:
       if dictionary[s[i]] > dictionary[s[i + 1]]:
         total += dictionary[s[i]]
+        i += 1
       elif dictionary[s[i]] < dictionary[s[i + 1]]:
         total += dictionary[s[i + 1]] - dictionary[s[i]]
         i += 2
       else:
         total += dictionary[s[i]]
-      i += 1
+        i += 1
+    # Here we add the last value of the string
+    if i < len(s):
+      total += dictionary[s[i]]
     return total
 
   # Function to verify that the same letter does not repit more than 3 times
