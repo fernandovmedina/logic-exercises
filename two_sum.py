@@ -3,7 +3,7 @@ target = 9
 
 class Solution:
   def twoSum(self, nums: list[int], target: int) -> list[int]:
-    list: [int] = []
+    list: list[int] = []
     for i in range(len(nums)):
       for j in range(len(nums)):
         if i == j:
