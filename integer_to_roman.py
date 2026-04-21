@@ -25,7 +25,7 @@ class Solution:
             r += "X"
         match u:
           case 4:
-            r += "LX"
+            r += "XL"
           case 5:
             r += "L"
           case 6:
@@ -55,15 +55,14 @@ class Solution:
             r += "IX"
     return r        
     
-  def integerToRoman(self, number: int) -> str:
+  def intToRoman(self, number: int) -> str:
     roman: str = ""
     
     m: int = int(number / 1000)
     c: int = int((number % 1000) / 100)
     d: int = int(((number % 1000) % 100) / 10)
     u: int = ((number % 1000) % 100) % 10
-    
-    # Here we just range the thousands bc it can be a maximum of 3
+
     for i in range(m):
       roman += "M"
     
