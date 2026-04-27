@@ -10,14 +10,10 @@ class Solution:
   def formatCNotation(self, n: int) -> str:
     ss = str(n)
     ss_clean = ss.rstrip('0')
-    
     exponente = len(ss) - 1
-    
     if len(ss_clean) == 1:
       return f"{ss_clean}\\cdot10^{{{exponente}}}"
-    
     mantisa = ss_clean[0] + "." + ss_clean[1:]
-    
     return f"{mantisa}\\cdot10^{{{exponente}}}"
   
   def Latex(self, string: str) -> str:
@@ -35,17 +31,14 @@ class Solution:
             numbers.append(int(temp_n))
             temp_n = ""
           c = False
-    
     if temp_n:
       numbers.append(int(temp_n))
-    
     nn: list[str] = []
     for i in range(len(numbers)):
       if self.isLog10(numbers[i]):
         nn.append(self.formatLog10(numbers[i]))
       else:
         nn.append(self.formatCNotation(numbers[i]))
-    
     print(nn)
     print(numbers)
 
