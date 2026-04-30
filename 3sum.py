@@ -1,20 +1,20 @@
 class Solution:
-    def threeSum(self, nums: list[int]) -> list[list[int]]:
-      res = set()
+  def threeSum(self, nums: list[int]) -> list[list[int]]:
+    res = set()
 
-      for i in range(len(nums)):
-        seen = set()
-        
-        for j in range(i + 1, len(nums)):
-          complemento = -(nums[i] + nums[j])
+    for i in range(len(nums)):
+      seen = set()
+      
+      for j in range(i + 1, len(nums)):
+        complemento = -(nums[i] + nums[j])
 
-          if complemento in seen:
-              tripleta = tuple(sorted([nums[i], nums[j], complemento]))
-              res.add(tripleta)
+        if complemento in seen:
+          tripleta = tuple(sorted([nums[i], nums[j], complemento]))
+          res.add(tripleta)
 
-          seen.add(nums[j])
+        seen.add(nums[j])
 
-      return [list(t) for t in res]
+    return [list(t) for t in res]
 
 x = Solution()
 
