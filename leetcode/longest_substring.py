@@ -17,4 +17,3 @@ x = Solution()
 print(x.lengthOfLongestSubstring("abcabcbb")) # Output: 3
 print(x.lengthOfLongestSubstring("bbbbb")) # Output: 1
 print(x.lengthOfLongestSubstring("pwwkew")) # Output: 3
- 

@@ -63,7 +63,7 @@ class Solution:
     d: int = int(((number % 1000) % 100) / 10)
     u: int = ((number % 1000) % 100) % 10
 
-    for i in range(m):
+    for _ in range(m):
       roman += "M"
     
     roman += self.convertUnitToLetter(100, c)
