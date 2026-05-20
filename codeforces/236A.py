@@ -11,7 +11,4 @@ characters: set = set()
 for i in range(len(string)):
   characters.add(string[i])
 
-if len(characters) % 2 == 0:
-  print("CHAT WITH HER!")
-else:
-  print("IGNORE HIM!")
+print((lambda x: "CHAT WITH HER!" if x % 2 == 0 else "IGNORE HIM!")(len(characters)))
