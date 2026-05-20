@@ -1,15 +1,11 @@
 class Solution:
   def divide(self, dividend: int, divisor: int) -> int:
-    if dividend >= -2 ** 31 and dividend <= 2 ** 31 - 1:
-      pass
+    INT_MIN = -2**31
+    INT_MAX = 2**31 - 1
 
-    if dividend == 0:
-      return 0
-    
-    if divisor == 1:
-      return dividend
-    
-    if divisor == -1:
-      return -dividend
-    
+    if dividend == INT_MIN and divisor == -1:
+      return INT_MAX
+
     return int(dividend / divisor)
+  
+print(Solution().divide(-2147483648, -1))
