@@ -33,5 +33,5 @@ class Solution:
 
 x: Solution = Solution()
 
-print(x.letterCombinations("23")) # Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+print(x.letterCombinations("234")) # Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 # x.letterCombinations("2")  # Output: ["a","b","c"]

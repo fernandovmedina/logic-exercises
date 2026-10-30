@@ -76,4 +76,4 @@ x = Solution()
 
 numbers = [3, 58, 1994, 1884, 3999]
 
-print([x.integerToRoman(n) for n in numbers])
+print([x.intToRoman(n) for n in numbers])
